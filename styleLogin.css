@@ -1,180 +1,191 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  background-color: #fffdfd;
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #333;
-  color: #fff;
-  padding: 10px 30px;
-  flex-wrap: wrap;
+body * {
+    box-sizing: border-box;
 }
 
-.aaaa {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 30px;
-  background-color: #2135A6;
-  flex-wrap: wrap;
+.main-login {
+    width: 100vw;
+    height: 100vh;
+    background: #2135A6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-.left img {
-  display: block;
-  margin-left: 20px;
-  width: 200px;
-  height: auto;
+.left-login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 90px;
-  flex-wrap: wrap;
-  justify-content: center;
+.left-login > h1 {
+    color: #fafbfb;
+    font-size: 2.5vw;
 }
 
-nav ul li a {
-  color: #fbfbfb;
-  text-decoration: none;
-  font-size: 19px;
-  font-weight: 750;
+.left-login-image {
+    width: 28vw;
+    max-width: 300px;
 }
 
-#topo {
-  background-color: #eaeaeb;
-  background-size: cover;
-  background-position: center;
-  color: #333;
-  text-align: center;
-  padding: 150px 20px;
+.right-login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
-#topo p {
-  margin-top: 30px;
-  font-weight: 500;
-  font-size: 28px;
+.card-login {
+    width: 60%;
+    max-width: 400px;
+    background: #e2e2e2;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #37373756;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
 }
 
-#topo h2 {
-  margin-bottom: 30px;
-  font-weight: 700;
-  font-size: 36px;
+.card-login > h1 {
+    color: #0b0c0c;
+    font-weight: 800;
+    margin: 0;
+    padding: 30px;
+    font-size: 40px;
 }
 
-.btn {
-  display: inline-block;
-  background-color: #F3541C;
-  color: #fff;
-  padding: 20px 30px;
-  text-decoration: none;
-  border-radius: 50px;
-  margin-top: 40px;
-  font-size: 20px;
+.textfield {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0;
 }
 
-.btn2 {
-  display: inline-block;
-  background-color: #F3541C;
-  color: #fff;
-  padding: 15px 25px;
-  text-decoration: none;
-  border-radius: 50px;
-  margin-top: 20px;
-  font-size: 14px;
+.textfield > input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #ffffff;
+    color: #00e1e1de;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #37373756;
+    outline: none;
+    box-sizing: border-box;
 }
 
-#sobre,
-#contato {
-  padding: 30px 100px;
+.textfield > label {
+    color: #111213;
+    margin-bottom: 10px;
 }
 
-footer {
-  background-color: #2135A6;
-  color: #fff;
-  padding: 20px 30px;
-  text-align: center;
+.textfield > input::placeholder {
+    color: #bdbcbc;
 }
 
-/* --------- RESPONSIVIDADE --------- */
+.btn-login {
+    width: 100%;
+    padding: 17px 0;
+    margin: 25px 0;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #ffeee7;
+    background-color: #F3541C;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #007dfa;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rodape a {
+    text-decoration: none;
+    color: #F3541C;
+}
+
+/* RESPONSIVO */
 
 @media only screen and (max-width: 950px) {
-  nav ul {
-    gap: 40px;
-  }
+    .card-login {
+        width: 85%;
+    }
 
-  #topo h2 {
-    font-size: 30px;
-  }
+    .left-login > h1 {
+        font-size: 4vw;
+    }
 
-  #topo p {
-    font-size: 22px;
-  }
-
-  .btn {
-    font-size: 18px;
-    padding: 16px 24px;
-  }
-
-  #sobre,
-  #contato {
-    padding: 30px 50px;
-  }
+    .left-login-image {
+        width: 40vw;
+    }
 }
 
-@media only screen and (max-width: 600px) {
-  header,
-  .aaaa {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 15px;
-  }
+@media only screen and (max-width: 768px) {
+    .main-login {
+        flex-direction: column;
+        height: auto;
+    }
 
-  .left img {
-    width: 150px;
-    margin: 10px auto;
-  }
+    .left-login {
+        width: 100%;
+        height: auto;
+    }
 
-  nav ul {
-    flex-direction: column;
-    gap: 20px;
-    padding: 10px 0;
-  }
+    .right-login {
+        width: 100%;
+        height: auto;
+    }
 
-  nav ul li a {
-    font-size: 18px;
-  }
+    .left-login > h1 {
+        display: none;
+    }
 
-  #topo {
-    padding: 100px 20px;
-  }
+    .left-login-image {
+        width: 60vw;
+        margin-bottom: 20px;
+    }
 
-  #topo h2 {
-    font-size: 26px;
-  }
+    .card-login {
+        width: 90%;
+        max-width: 360px;
+    }
+}
 
-  #topo p {
-    font-size: 18px;
-  }
+@media only screen and (max-width: 480px) {
+    .card-login > h1 {
+        font-size: 28px;
+        padding: 20px 0;
+    }
 
-  .btn {
-    font-size: 16px;
-    padding: 14px 20px;
-  }
+    .btn-login {
+        font-size: 12px;
+        padding: 14px 0;
+    }
 
-  #sobre,
-  #contato {
-    padding: 20px;
-  }
+    .left-login-image {
+        width: 70vw;
+    }
 }
