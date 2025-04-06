@@ -1,162 +1,180 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-
-body{
-    margin: 0;
-    font-family: 'Noto Sans', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body * {
-    box-sizing: border-box;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #fffdfd;
 }
 
-.main-login{
-    width: 100vw; /*100vw --> 1000px*/
-    height: 100vh; /*1vh --> 10px*/
-    background: #2135A6;
-    display: flex;
-    justify-content: center; /*aligh-items: eixo y, justify-content: eixo x*/
-    align-items: center;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 30px;
+  flex-wrap: wrap;
 }
 
-.left-login{
-    width: 50vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
+.aaaa {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: #2135A6;
+  flex-wrap: wrap;
 }
 
-.left-login > h1{
-    color:rgb(250, 251, 251);
-    font-size: 2.5vw;
+.left img {
+  display: block;
+  margin-left: 20px;
+  width: 200px;
+  height: auto;
 }
 
-.left-login-image{
-    width: 28vw;
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 90px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.right-login{
-    width: 50vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+nav ul li a {
+  color: #fbfbfb;
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: 750;
 }
 
-.card-login{
-    width: 60%;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    flex-direction: column;
-    padding: 30px 35px;
-    background: #e2e2e2;
-    border-radius: 20px;
-    box-shadow: 0px 10px 40px #37373756;
+#topo {
+  background-color: #eaeaeb;
+  background-size: cover;
+  background-position: center;
+  color: #333;
+  text-align: center;
+  padding: 150px 20px;
 }
 
-.card-login > h1{
-    color: #0b0c0c;
-    font-weight: 800;
-    margin: 0;
-    padding: 30px;
-    font-size: 40px;
+#topo p {
+  margin-top: 30px;
+  font-weight: 500;
+  font-size: 28px;
 }
 
-
-.textfield{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /*esquerda*/
-    justify-content: center;
-    margin: 10px 0px; /*1º eixo x, 2º eixo y*/
+#topo h2 {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 36px;
 }
 
-.textfield > input{
-    width: 100%;
-    border: none;
-    border-radius: 10px;
-    padding: 15px;
-    background: #ffffff;
-    color: #00e1e1de;
-    font-size: 12pt;
-    box-shadow: 0px 10px 40px #37373756;
-    outline: none;
-    box-sizing: border-box;
+.btn {
+  display: inline-block;
+  background-color: #F3541C;
+  color: #fff;
+  padding: 20px 30px;
+  text-decoration: none;
+  border-radius: 50px;
+  margin-top: 40px;
+  font-size: 20px;
 }
 
-.textfield > label {
-    color:#111213;
-    margin-bottom: 10px;
-
+.btn2 {
+  display: inline-block;
+  background-color: #F3541C;
+  color: #fff;
+  padding: 15px 25px;
+  text-decoration: none;
+  border-radius: 50px;
+  margin-top: 20px;
+  font-size: 14px;
 }
 
-.textfield > input::placeholder{
-    color: #bdbcbc;
-
+#sobre,
+#contato {
+  padding: 30px 100px;
 }
 
-.btn-login{
-    width: 100%;
-    padding: 17px 0px;
-    margin: 25px;
-    border: none;
-    border-radius: 8px;
-    outline: none;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 3px;
-    color:#ffeee7;
-    background-color: #F3541C; 
-    cursor: pointer;
-    box-shadow: 0px 10px 40px -12px #007dfa;
-
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+footer {
+  background-color: #2135A6;
+  color: #fff;
+  padding: 20px 30px;
+  text-align: center;
 }
 
-.rodape a {
-    text-decoration: none;
-    color: #F3541C;
-
-  }
+/* --------- RESPONSIVIDADE --------- */
 
 @media only screen and (max-width: 950px) {
-    .card-login{
-        width: 85%;
-    }
+  nav ul {
+    gap: 40px;
+  }
+
+  #topo h2 {
+    font-size: 30px;
+  }
+
+  #topo p {
+    font-size: 22px;
+  }
+
+  .btn {
+    font-size: 18px;
+    padding: 16px 24px;
+  }
+
+  #sobre,
+  #contato {
+    padding: 30px 50px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
-    .main-login{
-        flex-direction: column;
-    }
+  header,
+  .aaaa {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+  }
 
-    .left-login > h1{
-        display: none;
-    }
+  .left img {
+    width: 150px;
+    margin: 10px auto;
+  }
 
-    .left-login{
-        width: 100%;
-        height: auto;
-    }
+  nav ul {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 0;
+  }
 
-    .right-login{
-        width: 100%;
-        height: auto;
-    }
+  nav ul li a {
+    font-size: 18px;
+  }
 
-    .left-login-image{
-        width: 50vw;
-    }
+  #topo {
+    padding: 100px 20px;
+  }
 
-    .card-login{
-        width: 90%;
-    }
+  #topo h2 {
+    font-size: 26px;
+  }
+
+  #topo p {
+    font-size: 18px;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 14px 20px;
+  }
+
+  #sobre,
+  #contato {
+    padding: 20px;
+  }
 }
-
