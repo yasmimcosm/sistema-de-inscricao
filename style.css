@@ -1,0 +1,302 @@
+/* Estilos Gerais */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    color: #333;
+    background-color: hsl(0, 0%, 98%);
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Faz o body ocupar toda a altura da tela */
+    overflow-y: hidden; /* Adiciona scrollbar */
+}
+
+.navegacao {
+    display: flex;
+    align-items: flex-start; /* Alinha a imagem verticalmente */
+    flex-direction: column;
+    justify-content: left;
+    width: 100%;
+    /*padding-left: 30px;*/
+    gap: 10px;
+}
+
+.icone-voltar {
+    width: 70px; /* Aumenta a largura da imagem */
+    height: auto; /* Aumenta a altura da imagem */
+    object-fit: contain; /* Mantém a imagem inteira sem cortes */
+    padding-top: 30px;
+}
+
+.navegacao, .link-voltar {
+    display: flex; /* Ou block */
+    width: auto; /* Permite que o tamanho seja flexível */
+    height: auto;
+    gap: 30px;
+}
+
+.input {
+    padding: 20px;
+}
+
+.input > label {
+    display: block;
+    font-size: 22px;
+    margin-bottom: 0.2rem;
+}
+
+.input > input {
+    width: 320px;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 8px;
+    color: #333;
+}
+
+/* Layout de duas colunas */
+.conteudo {
+    display: flex; /* flexbox */
+    width: 100%; /* Ocupa toda a largura */
+    height: 700px; /* Altura total do formulário */
+}
+
+/* Coluna do formulário */
+.coluna-formulario {
+    /*flex: 1;*/
+    padding: 30px; /* Espaçamento da borda do site */
+    overflow-y: auto; /* Adiciona scrollbar */
+}
+
+/* Coluna da imagem */
+.coluna-imagem {
+    text-align: center; /* Centraliza as imagens */
+    background-color: #0056b3;
+    width: 48%;
+    gap: 10px;
+}
+
+.coluna-imagem img {
+    display: block; /* Faz as imagens ficarem em blocos separados */
+    margin: 50px auto; /* Adiciona espaçamento e centraliza */
+    display: flex; 
+    align-items: center;
+}
+ 
+#Imagem_1 {
+    width: 500px; /* Ajuste o tamanho conforme necessário */
+    height: 500px;
+}
+
+/* Endereço residencial */
+.endereco {
+    margin: 5px;
+    padding-bottom: 20px;
+}
+
+.linha {
+    display: flex; /* flexbox */
+    gap: 15px; /* Espaçamento entre os elementos */
+}
+
+.linha > div {
+    flex: 1; /* Ocupa o espaço restante */
+}
+
+/* Estilos para os campos de upload */
+.upload-arquivo {
+    display: flex; /* flexbox */
+    flex-direction: column; /* Coluna */
+    align-items: center; /* Centraliza os elementos */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    width: 700px;
+    height: auto; /* Altura */
+    border: 2px dashed #ccc;   /* Cor da borda */
+    border-radius: 8px; /* Arredonda a borda */
+    padding: 20px; /* Espaçamento interno */
+    transition: border-color 0.3s; /* Animação ao passar o mouse */
+    overflow: hidden; /* Esconde o conteúdo que ultrapassa o botão*/
+    margin: 0 auto; /* Centraliza o botão */
+    gap: 10px; /* Espaçamento entre os elementos */
+}
+
+.upload-arquivo img {
+    width: auto;   /* Largura da imagem */
+    height: 100px; /* Altura da imagem */
+    object-fit: cover; /* Ajusta a imagem ao tamanho do container */
+    transition: transform 0.3s; /* Animação ao passar o mouse */
+}
+
+.upload-arquivo:hover img {
+    transform: scale(0.9); /* Diminui a imagem ao passar o mouse */
+}
+
+.upload-arquivo:hover {
+    border-color: #0080ff; /* Cor do botão */
+}
+
+/* Estilos para as opções de trilhas */
+.selecao-trilha {
+    display: flex; /* flexbox */
+    flex-wrap: wrap; /* Quebra a linha ao atingir a largura máxima */
+    gap: 15px; /* Espaçamento entre os elementos */
+}
+
+.opcao-trilha {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid #ccc; /* Cor da borda */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    transition: border-color 0.3s, background-color 0.3s; /* Animação ao passar o mouse */
+    padding: 20px; /* Espaçamento interno */
+    width: 340px; /* Largura do botão */
+    overflow: hidden;
+    box-sizing: border-box; /* Inclui padding e borda na largura */
+    gap: 10px; /* Espaçamento entre os elementos */
+}
+
+.opcao-trilha:hover img {
+    transform: scale(0.9); /* Diminui a imagem ao passar o mouse */
+}
+
+.opcao-trilha:hover {
+    border-color: #F3541C;
+}
+
+.opcao-trilha input {
+    display: none;
+}
+
+.opcao-trilha:has(input:checked) {
+    border: 3px solid #F3541C;
+    box-shadow: 0px 0px 10px rgba(214, 87, 13, 0.6);
+    transform: scale(1.05);
+}
+
+.opcao-trilha:has(input:checked) img {
+    transform: rotate(10deg) scale(1.1);
+}
+
+.opcao-trilha img {
+    width: 50px;
+    height: 50px;
+
+    transition: transform 0.3s;
+}
+
+.opcao-trilha:has(input:checked) img {
+    transform: rotate(10deg) scale(1.1);
+}
+
+.opcao-trilha span {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.opcao-trilha span {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Política */
+.politica {
+    display: flex; /* flexbox */
+    align-items: center; /* Centraliza os elementos */
+    gap: 10px; /* Espaçamento entre os elementos */
+    margin: 30px;
+}
+
+.politica input {
+    width: auto; /* Largura automática */
+}
+
+/* Erro */
+.input > p {
+    color: red;
+}
+
+.invalid {
+    border: 1px solid red;
+}
+
+/* Botão */
+.botao-area {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.btn {
+    background-color: #f3541c;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    height: 40px;
+    width: 150px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #545454;
+}
+
+.error-hidden {
+    display: none;
+}
+
+/* Estilos do Formulário */
+.formulario {
+    max-width: 800px; /* Largura máxima do formulário */
+}
+
+.formulario h1 {
+    text-align: left; /* Alinhado à esquerda */
+    color: #000000; /* Cor do título */
+    margin-bottom: 20px; /* Espaçamento */
+}
+
+.formulario h2 {
+    color: #000000; /* Cor do subtítulo */
+    margin-top: 20px; /* Espaçamento */
+    margin-bottom: 10px; /* Espaçamento */
+    text-align: left; /* Alinhado à esquerda */
+}
+
+form {
+    display: flex; /* flexbox */
+    flex-direction: column; /* Coluna */
+    gap: 20px; /* Espaçamento entre os elementos */
+}
+
+label {
+    font-weight: bold;  /* Define a fonte como negrito */
+    margin-bottom: 5px; /* Espaçamento */
+    text-align: left; /* Alinhado à esquerda */
+}
+
+input, select, button {
+    padding: 10px;  /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    border: 2px solid #c0bfbf; /* Cor da borda */
+    border-radius: 5px; /* Borda arredondada */
+    width: 100%; /* Ocupa toda a largura */
+    box-sizing: border-box; /* Inclui padding e borda na largura */
+    color: #333;
+}
+
+.input input::placeholder {
+    font-size: 16px; /* Ajuste o valor conforme necessário */
+}

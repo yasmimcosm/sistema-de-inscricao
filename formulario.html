@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trilhas Inova - Cadastro</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="conteudo">
+
+        <div class="coluna-formulario">
+
+            <section id="inicio" class="formulario">
+
+                <div class="formulario-conteudo">
+
+                    <div class="navegacao">
+                        <a href="/index.html" class="link-voltar">
+                            <img src="img/voltar.png" alt="Seta" class="icone-voltar">
+                        </a>
+
+                        <h1 style="font-size: 35px;">Formulário de Inscrição</h1>
+                        <p style="font-size: 18px;">Preencha os dados abaixo para fazer sua inscrição no Programa Trilhas.</p>
+                        <div class="msg"></div>
+
+                        <h2 style="font-size: 20px;">Informações do participante</h2>
+                    </div>  
+
+                    <form id="my_form">
+                        <div class="linha">
+                            <div class="input">
+                                <label>Nome Completo</label>
+                                <input name="name" placeholder="Digite seu nome">
+                                <p class="error error-hidden">O nome é obrigatório</p>
+                            </div>
+                            
+                            <div class="input">
+                                <label for="genero">Sexo:</label>
+                                <select id="genero" name="genero" required>
+                                    <option value="feminino">Feminino</option>
+                                    <option value="masculino">Masculino</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+                        </div>
+                    
+                        <div class="linha">
+                            <div class="input">
+                                <label>E-mail</label>
+                                <input name="email" placeholder="Digite seu melhor email">
+                                <p class="error error-hidden">O e-mail é inválido</p>
+                            </div>
+
+                            <div class="input">
+                                <label>Telefone</label>
+                                <input name="phone" placeholder="(xx) xxxxx-xxxx">
+                                <p class="error error-hidden">O número é inválido</p>
+                            </div>
+                        </div>
+                        
+                        <div class="linha">
+                            <div class="input">
+                                <label for="dataNascimento">Data de nascimento:</label>
+                                <input name="birthdate" id="dataNascimento" type="date" max="2025-03-18" />
+                                <p class="error error-hidden">A data é inválida</p>
+                            </div>
+
+                            <div class="input">
+                                <label>CPF</label>
+                                <input name="cpf" placeholder="Digite seu CPF">
+                                <p class="error error-hidden">O CPF é inválido</p>
+                            </div>
+                        </div>
+
+                        <div class="linha">
+                            <div>
+                                <label for="identidade"><h3>Documento de identidade:</h3></label>
+                                <div class="upload-arquivo">
+                                    <img id="imgIdentidade" src="img/upload.png" alt="Upload Documento" onclick="document.getElementById('identidade').click()">
+                                    <input type="file" id="identidade" name="identidade" required style="display: none;">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h2>Endereço residencial</h2>
+                        <div class="endereco">
+                            <div class="linha">
+                                <div>
+                                    <label for="cepUsuario">CEP:</label>
+                                    <input type="text" id="cepUsuario" name="cepUsuario" required>
+                                </div>
+                                <div>
+                                    <label for="logradouro">Rua:</label>
+                                    <input type="text" id="logradouro" name="logradouro" required>
+                                </div>
+                            </div>
+    
+                            <div class="linha">
+                                <div>
+                                    <label for="numeroCasa">Número:</label>
+                                    <input type="text" id="numeroCasa" name="numeroCasa" required>
+                                </div>
+                                <div>
+                                    <label for="cidade">Cidade:</label>
+                                    <input type="text" id="cidade" name="cidade" required>
+                                </div>
+                            </div>
+    
+                            <div class="linha">
+                                <div>
+                                    <label for="estado">Estado:</label>
+                                    <input type="text" id="estado" name="estado" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comprovanteResidencia">
+                            <div class="linha">
+                                <div>
+                                    <div class="upload-arquivo">
+                                        <img id="imgResidencia" src="img/upload.png" alt="Upload Comprovante" onclick="document.getElementById('residencia').click()">
+                                        <input type="file" id="residencia" name="residencia" required style="display: none;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2>Trilhas de aprendizagem</h2>
+
+                        <div class="selecao-trilha">
+                            <label class="opcao-trilha">
+                                <input type="radio" name="trilha" value="frontend" required>
+                                <img src="img/front.png" alt="Front-end">
+                                <span>Programação Front-end</span>
+                            </label>
+                            <label class="opcao-trilha">
+                                <input type="radio" name="trilha" value="backend" required>
+                                <img src="img/backend.png" alt="Back-end">
+                                <span>Programação Back-end</span>
+                            </label>
+                            <label class="opcao-trilha">
+                                <input type="radio" name="trilha" value="games" required>
+                                <img src="img/games.png" alt="Jogos">
+                                <span>Programação de Jogos</span>
+                            </label>
+                            <label class="opcao-trilha">
+                                <input type="radio" name="trilha" value="design" required>
+                                <img src="img/design.png" alt="Design">
+                                <span>Design e Experiência</span>
+                            </label>
+                            <label class="opcao-trilha">
+                                <input type="radio" name="trilha" value="data" required>
+                                <img src="img/data.png" alt="Dados">
+                                <span>Ciência de Dados</span>
+                            </label>
+                        </div>
+                        <br>
+                        <h2>Login</h2>
+                        <div class="linha">
+                            <div>
+                                <label for="usuario">ID de Usuário:</label>
+                                <input type="text" id="usuario" name="usuario" placeholder="Crie um ID">
+                            </div>
+                            
+                            <div>
+                                <label for="senha">Senha:</label>
+                                <input type="password" id="senha" name="senha" placeholder="Crie uma senha">
+                            </div>
+                        </div>
+
+                        <div class="politica">
+                            <input type="checkbox" id="termos" name="termos" required>
+                            <label for="termos">Li e concordo com os <span style="color: rgb(21, 21, 21);">Termos e Condições</span> e com a <span>Política de Privacidade.</span></label>
+                        </div>
+
+        
+
+                        <div class="botao-area">
+                            <button type="submit" class="btn">Fazer inscrição</button>
+                        </div>
+
+                        
+
+                    </form>
+                    
+                </div>
+            </section>
+            
+        </div>
+        <div class="coluna-imagem">
+            <img src="/img/banner.png" id="Imagem_1">
+            <img src="/img/logo-trilhas-inova.png" id="Imagem_2">
+        </div>
+    </div>
+    
+    <div class="thanks">
+        <h2>Obrigado pelo seu contato!</h2>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
