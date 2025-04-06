@@ -1,112 +1,180 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    background-color: #fffdfd;
-  }
-  
-  header {
-    display: flex;
-    justify-content: space-between;
-    background-color: #333;
-    color: #fff;
-    padding: 10px 30px;
-  }
-  
-  .aaaa {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: #2135A6;
-  }
-  
-  .left img {
-    display: block; /* Faz as imagens ficarem em blocos separados */
-    margin: 20px auto; /* Adiciona espaçamento e centraliza */
-    display: flex; 
-    background-size: cover;
-    background-position: left;
-    text-align: left;
-    margin-left: 20px;
-    width: 200px;
-    height: auto;
-    
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #fffdfd;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 30px;
+  flex-wrap: wrap;
+}
+
+.aaaa {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: #2135A6;
+  flex-wrap: wrap;
+}
+
+.left img {
+  display: block;
+  margin-left: 20px;
+  width: 200px;
+  height: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 90px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav ul li a {
+  color: #fbfbfb;
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: 750;
+}
+
+#topo {
+  background-color: #eaeaeb;
+  background-size: cover;
+  background-position: center;
+  color: #333;
+  text-align: center;
+  padding: 150px 20px;
+}
+
+#topo p {
+  margin-top: 30px;
+  font-weight: 500;
+  font-size: 28px;
+}
+
+#topo h2 {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #F3541C;
+  color: #fff;
+  padding: 20px 30px;
+  text-decoration: none;
+  border-radius: 50px;
+  margin-top: 40px;
+  font-size: 20px;
+}
+
+.btn2 {
+  display: inline-block;
+  background-color: #F3541C;
+  color: #fff;
+  padding: 15px 25px;
+  text-decoration: none;
+  border-radius: 50px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+#sobre,
+#contato {
+  padding: 30px 100px;
+}
+
+footer {
+  background-color: #2135A6;
+  color: #fff;
+  padding: 20px 30px;
+  text-align: center;
+}
+
+/* --------- RESPONSIVIDADE --------- */
+
+@media only screen and (max-width: 950px) {
   nav ul {
-    list-style: none;
-    display: flex;
-    gap: 90px;
+    gap: 40px;
   }
-  
-  nav ul li a {
-    margin: 30px;
-    color: #fbfbfb;
-    text-decoration: none;
-    font-size: 19px;
-    font-weight: 750;
-  }
-  
-  #topo {
-    background-color: #eaeaeb;
-    background-size: cover;
-    background-position: center;
-    color: #333;
-    text-align: center;
-    padding: 200px 30px;
-  }
-  
-  #topo p {
-    margin-top: 30px;
-    font-weight: 500;
+
+  #topo h2 {
     font-size: 30px;
   }
-  
-  #topo h2 {
-    margin-bottom: 30px;
-    font-weight: 700;
-    font-size: 38px;
-  }
-  
-  .btn {
-    display: inline-block;
-    background-color: #F3541C;
-    color: #fff;
-    padding: 30px 30px;
-    text-decoration: none;
-    border-radius: 50px;
-    margin-top: 50px;
+
+  #topo p {
     font-size: 22px;
   }
 
-  .btn2 {
-    display: inline-block;
-    background-color: #F3541C;
-    color: #fff;
-    padding: 20px;
-    text-decoration: none;
-    border-radius: 50px;
-    margin-top: 20px;
-    font-size: 14px;
+  .btn {
+    font-size: 18px;
+    padding: 16px 24px;
   }
-  
-  #sobre {
-    padding: 30px 100px;
-  }
-  
+
+  #sobre,
   #contato {
-    padding: 30px 100px;
+    padding: 30px 50px;
   }
-  
-  footer {
-    background-color: #2135A6;
-    color: #fff;
-    padding: 20px 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  header,
+  .aaaa {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
   }
-  
+
+  .left img {
+    width: 150px;
+    margin: 10px auto;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 0;
+  }
+
+  nav ul li a {
+    font-size: 18px;
+  }
+
+  #topo {
+    padding: 100px 20px;
+  }
+
+  #topo h2 {
+    font-size: 26px;
+  }
+
+  #topo p {
+    font-size: 18px;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 14px 20px;
+  }
+
+  #sobre,
+  #contato {
+    padding: 20px;
+  }
+}
