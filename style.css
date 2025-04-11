@@ -100,8 +100,17 @@ body {
     gap: 15px;
 }
 
+.linha1 {
+    display: flex; /* flexbox */
+    gap: 15px; /* Espaçamento entre os elementos */
+}
+
 .linha > div {
     flex: 1;
+}
+
+.linha1 > div {
+    flex: 1; /* Ocupa o espaço restante */
 }
 
 .upload-arquivo {
@@ -294,6 +303,10 @@ input, select, button {
     .conteudo {
         flex-direction: column;
         height: auto;
+    }
+
+    .linha1{
+        flex-direction: column
     }
 
     .coluna-formulario {
