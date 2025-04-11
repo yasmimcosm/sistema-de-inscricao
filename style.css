@@ -1,5 +1,12 @@
-/* Estilos Gerais */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -10,36 +17,53 @@ body {
     background-color: hsl(0, 0%, 98%);
     display: flex;
     flex-direction: column;
-    height: 100vh; /* Faz o body ocupar toda a altura da tela */
-    overflow-y: hidden; /* Adiciona scrollbar */
+    height: 100vh; 
+   
 }
-
 .navegacao {
     display: flex;
-    align-items: flex-start; /* Alinha a imagem verticalmente */
+    align-items: flex-start; 
     flex-direction: column;
     justify-content: left;
     width: 100%;
-    /*padding-left: 30px;*/
     gap: 10px;
 }
 
 .icone-voltar {
-    width: 70px; /* Aumenta a largura da imagem */
-    height: auto; /* Aumenta a altura da imagem */
-    object-fit: contain; /* Mantém a imagem inteira sem cortes */
+    width: 70px; 
+    height: auto; 
+    object-fit: contain;
     padding-top: 30px;
 }
 
 .navegacao, .link-voltar {
-    display: flex; /* Ou block */
-    width: auto; /* Permite que o tamanho seja flexível */
+    display: flex;
+    width: auto; 
     height: auto;
     gap: 30px;
 }
 
 .input {
-    padding: 20px;
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.input label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+.input input,
+.input select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
 .input > label {
@@ -56,113 +80,135 @@ body {
     color: #333;
 }
 
-/* Layout de duas colunas */
 .conteudo {
-    display: flex; /* flexbox */
-    width: 100%; /* Ocupa toda a largura */
-    height: 700px; /* Altura total do formulário */
+    display: flex; 
+    flex-direction: row;
+    width: 100%; 
+    height: 100vh; 
 }
 
-/* Coluna do formulário */
+
 .coluna-formulario {
-    /*flex: 1;*/
-    padding: 30px; /* Espaçamento da borda do site */
-    overflow-y: auto; /* Adiciona scrollbar */
+    flex: 1;
+    padding: 30px; 
+    overflow-y: auto; 
 }
 
-/* Coluna da imagem */
+
 .coluna-imagem {
-    text-align: center; /* Centraliza as imagens */
+    text-align: center; 
     background-color: #0056b3;
     width: 48%;
     gap: 10px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .coluna-imagem img {
-    display: block; /* Faz as imagens ficarem em blocos separados */
-    margin: 50px auto; /* Adiciona espaçamento e centraliza */
+    display: block;
+    margin: 50px auto;
     display: flex; 
     align-items: center;
 }
  
 #Imagem_1 {
-    width: 500px; /* Ajuste o tamanho conforme necessário */
+    width: 500px; 
     height: 500px;
 }
 
-/* Endereço residencial */
+.formulario {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 .endereco {
     margin: 5px;
     padding-bottom: 20px;
 }
 
 .linha {
-    display: flex; /* flexbox */
-    gap: 15px; /* Espaçamento entre os elementos */
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px; 
 }
 
 .linha > div {
-    flex: 1; /* Ocupa o espaço restante */
+    flex: 1; 
 }
 
-/* Estilos para os campos de upload */
+
 .upload-arquivo {
-    display: flex; /* flexbox */
-    flex-direction: column; /* Coluna */
-    align-items: center; /* Centraliza os elementos */
-    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    cursor: pointer; 
     width: 700px;
-    height: auto; /* Altura */
-    border: 2px dashed #ccc;   /* Cor da borda */
-    border-radius: 8px; /* Arredonda a borda */
-    padding: 20px; /* Espaçamento interno */
-    transition: border-color 0.3s; /* Animação ao passar o mouse */
-    overflow: hidden; /* Esconde o conteúdo que ultrapassa o botão*/
-    margin: 0 auto; /* Centraliza o botão */
-    gap: 10px; /* Espaçamento entre os elementos */
+    height: auto;
+    border: 2px dashed #ccc;   
+    border-radius: 8px; 
+    padding: 20px; 
+    transition: border-color 0.3s; 
+    overflow: hidden; 
+    margin: 0 auto; 
+    gap: 10px; 
 }
 
 .upload-arquivo img {
-    width: auto;   /* Largura da imagem */
-    height: 100px; /* Altura da imagem */
-    object-fit: cover; /* Ajusta a imagem ao tamanho do container */
-    transition: transform 0.3s; /* Animação ao passar o mouse */
+    width: auto; 
+    height: 100px; 
+    object-fit: cover; 
+    transition: transform 0.3s; 
 }
 
 .upload-arquivo:hover img {
-    transform: scale(0.9); /* Diminui a imagem ao passar o mouse */
+    transform: scale(0.9); 
 }
 
 .upload-arquivo:hover {
-    border-color: #0080ff; /* Cor do botão */
+    border-color: #0080ff; 
 }
 
-/* Estilos para as opções de trilhas */
+.trilhas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+
 .selecao-trilha {
-    display: flex; /* flexbox */
-    flex-wrap: wrap; /* Quebra a linha ao atingir a largura máxima */
-    gap: 15px; /* Espaçamento entre os elementos */
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap; 
+    gap: 15px;
 }
 
 .opcao-trilha {
+    flex: 1 1 150px;
     display: inline-flex;
     flex-direction: column;
     align-items: center;
-    border: 3px solid #ccc; /* Cor da borda */
+    border: 1px solid #ccc; 
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
-    transition: border-color 0.3s, background-color 0.3s; /* Animação ao passar o mouse */
-    padding: 20px; /* Espaçamento interno */
-    width: 340px; /* Largura do botão */
+    transition: border-color 0.3s, background-color 0.3s; 
+    padding: 20px; 
+    width: 340px; 
     overflow: hidden;
-    box-sizing: border-box; /* Inclui padding e borda na largura */
-    gap: 10px; /* Espaçamento entre os elementos */
+    box-sizing: border-box; 
+    gap: 10px; 
 }
 
 .opcao-trilha:hover img {
-    transform: scale(0.9); /* Diminui a imagem ao passar o mouse */
+    transform: scale(0.9); 
 }
 
 .opcao-trilha:hover {
@@ -208,19 +254,19 @@ body {
     color: #333;
 }
 
-/* Política */
+
 .politica {
-    display: flex; /* flexbox */
-    align-items: center; /* Centraliza os elementos */
-    gap: 10px; /* Espaçamento entre os elementos */
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
     margin: 30px;
 }
 
 .politica input {
-    width: auto; /* Largura automática */
+    width: auto; 
 }
 
-/* Erro */
+
 .input > p {
     color: red;
 }
@@ -229,7 +275,7 @@ body {
     border: 1px solid red;
 }
 
-/* Botão */
+
 .botao-area {
     display: flex;
     justify-content: flex-end;
@@ -257,46 +303,87 @@ body {
     display: none;
 }
 
-/* Estilos do Formulário */
+
 .formulario {
-    max-width: 800px; /* Largura máxima do formulário */
+    max-width: 800px; 
 }
 
 .formulario h1 {
-    text-align: left; /* Alinhado à esquerda */
-    color: #000000; /* Cor do título */
-    margin-bottom: 20px; /* Espaçamento */
+    text-align: left; 
+    color: #000000; 
+    margin-bottom: 20px; 
 }
 
 .formulario h2 {
-    color: #000000; /* Cor do subtítulo */
-    margin-top: 20px; /* Espaçamento */
-    margin-bottom: 10px; /* Espaçamento */
-    text-align: left; /* Alinhado à esquerda */
+    color: #000000; 
+    margin-top: 20px; 
+    margin-bottom: 10px; 
+    text-align: left; 
 }
 
 form {
-    display: flex; /* flexbox */
-    flex-direction: column; /* Coluna */
-    gap: 20px; /* Espaçamento entre os elementos */
+    display: flex; 
+    flex-direction: column; 
+    gap: 20px; 
 }
 
 label {
-    font-weight: bold;  /* Define a fonte como negrito */
-    margin-bottom: 5px; /* Espaçamento */
-    text-align: left; /* Alinhado à esquerda */
+    font-weight: bold;
+    margin-bottom: 5px; 
+    text-align: left;
 }
 
 input, select, button {
-    padding: 10px;  /* Espaçamento interno */
-    font-size: 16px; /* Tamanho da fonte */
-    border: 2px solid #c0bfbf; /* Cor da borda */
-    border-radius: 5px; /* Borda arredondada */
-    width: 100%; /* Ocupa toda a largura */
-    box-sizing: border-box; /* Inclui padding e borda na largura */
+    padding: 10px; 
+    font-size: 16px; 
+    border: 2px solid #c0bfbf; 
+    border-radius: 5px; 
+    width: 100%;
+    box-sizing: border-box; 
     color: #333;
 }
 
 .input input::placeholder {
-    font-size: 16px; /* Ajuste o valor conforme necessário */
+    font-size: 16px; 
+}
+
+@media (max-width: 1024px) {
+    .conteudo {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .coluna-formulario {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .coluna-imagem {
+        width: 100%;
+        flex: 1;
+        display: flex;
+    }
+
+    #Imagem_1 {
+        width: 40%;
+        height: auto;
+    }
+
+    #Imagem_2 {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .upload-arquivo {
+        width: 90%;
+    }
+
+    .opcao-trilha {
+        width: 100%;
+    }
+
+    .input input,
+    .input select {
+        width: 100%;
+    }
 }
