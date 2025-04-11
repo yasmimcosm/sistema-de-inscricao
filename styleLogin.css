@@ -164,7 +164,9 @@ body * {
         height: auto;
     }
 
-    
+    .left-login > h1 {
+        font-size: 20px;
+    }
 
     .left-login-image {
         width: 60vw;
