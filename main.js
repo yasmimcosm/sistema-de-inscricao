@@ -1,4 +1,4 @@
-// Seleciona os inputs do formulário (página de cadastro)
+
 const form = document.querySelector('form');
 const inputName = document.querySelector('input[name="name"]');
 const inputEmail = document.querySelector('input[name="email"]');
@@ -95,7 +95,7 @@ const isValidPhone = (phone) => {
     return /^(\d{10}|\d{11})$/.test(cleaned);
 };
 
-// Evento de SUBMIT (cadastro)
+
 if (form && inputId && inputSenha) {
     form.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -119,7 +119,7 @@ if (form && inputId && inputSenha) {
     });
 }
 
-// Listeners para remover erro ao digitar
+
 if (inputName) {
     inputName.addEventListener('input', () => resetInput(inputName));
 }
@@ -136,7 +136,7 @@ if (inputPhone) {
     inputPhone.addEventListener('input', () => resetInput(inputPhone));
 }
 
-// Login
+
 const botaoLogin = document.querySelector('.btn-login');
 if (botaoLogin) {
     botaoLogin.addEventListener('click', () => {
