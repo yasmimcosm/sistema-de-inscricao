@@ -340,6 +340,16 @@ input, select, button {
     }
 }
 
+@media (max-width: 500px) {
+    .upload-arquivo {
+        width: 95%;
+    }
+
+    .upload-arquivo img {
+        height: 60px;
+    }
+}
+
 html, body {
     height: auto;
     overflow-x: hidden;
