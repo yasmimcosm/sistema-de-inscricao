@@ -27,7 +27,7 @@ body * {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    text-align: center;
+    text-align: left;
     padding: 20px;
 }
 
@@ -37,8 +37,8 @@ body * {
 }
 
 .left-login-image {
-    width: 28vw;
-    max-width: 300px;
+    
+    max-width: 400px;
 }
 
 .right-login {
@@ -147,11 +147,16 @@ body * {
     .main-login {
         flex-direction: column;
         height: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .left-login {
         width: 100%;
         height: auto;
+        font-size: 6vw; 
+        text-align: center;
+        margin: 20px 0;
     }
 
     .right-login {
@@ -159,9 +164,7 @@ body * {
         height: auto;
     }
 
-    .left-login > h1 {
-        display: none;
-    }
+    
 
     .left-login-image {
         width: 60vw;
@@ -189,3 +192,4 @@ body * {
         width: 70vw;
     }
 }
+
