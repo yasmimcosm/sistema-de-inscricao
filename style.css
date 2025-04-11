@@ -16,7 +16,7 @@ body {
     background-color: hsl(0, 0%, 98%);
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 .navegacao {
@@ -43,26 +43,7 @@ body {
 }
 
 .input {
-    flex: 1;
-    min-width: 250px;
-    margin-bottom: 20px;
-    padding: 0 10px;
-}
-
-.input label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
-    font-weight: bold;
-}
-
-.input input,
-.input select {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+    padding: 20px;
 }
 
 .input > label {
@@ -81,13 +62,11 @@ body {
 
 .conteudo {
     display: flex;
-    flex-direction: row;
     width: 100%;
-    flex: 1;
+    height: 700px;
 }
 
 .coluna-formulario {
-    flex: 1;
     padding: 30px;
     overflow-y: auto;
 }
@@ -97,11 +76,6 @@ body {
     background-color: #0056b3;
     width: 48%;
     gap: 10px;
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
 .coluna-imagem img {
@@ -110,16 +84,10 @@ body {
     display: flex;
     align-items: center;
 }
-
+ 
 #Imagem_1 {
     width: 500px;
     height: 500px;
-}
-
-.formulario {
-    max-width: 900px;
-    width: 100%;
-    margin: 0 auto;
 }
 
 .endereco {
@@ -129,8 +97,6 @@ body {
 
 .linha {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     gap: 15px;
 }
 
@@ -169,27 +135,17 @@ body {
     border-color: #0080ff;
 }
 
-.trilhas {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 20px;
-    padding: 0 10px;
-}
-
 .selecao-trilha {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     gap: 15px;
 }
 
 .opcao-trilha {
-    flex: 1 1 150px;
     display: inline-flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid #ccc;
+    border: 3px solid #ccc;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
