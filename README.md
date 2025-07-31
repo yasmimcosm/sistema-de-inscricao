@@ -26,7 +26,7 @@ A proposta é modernizar o sistema de inscrição do programa, permitindo:
 ## Como Executar Localmente
 
 1. **Clone o repositório**:
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
+git clone https://github.com/yasmimcosm/sistema-de-inscricao.git
 
 2. **Navegue até o diretório do projeto:**
 cd nome-do-repositorio
